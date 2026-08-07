@@ -2,9 +2,15 @@ name: Sync Preview Images
 
 on:
   schedule:
-    - cron: "0 4 * * 5"
+    # GitHub cron can be delayed. Retry throughout Friday's official update
+    # window (11:00-14:40 Asia/Shanghai) instead of relying on one noon run.
+    - cron: "0,20,40 3-6 * * 5"
     - cron: "0 7 * * 5"
-  workflow_dispatch: 
+  workflow_dispatch:
+
+concurrency:
+  group: preview-image-sync
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -13,6 +19,7 @@ permissions:
 jobs:
   sync-images:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
