@@ -2,10 +2,10 @@ name: Sync Preview Images
 
 on:
   schedule:
-    # GitHub cron can be delayed. Retry throughout Friday's official update
-    # window (11:00-14:40 Asia/Shanghai) instead of relying on one noon run.
-    - cron: "0,20,40 3-6 * * 5"
-    - cron: "0 7 * * 5"
+    # Official assets can change on any day; GitHub cron may run late.
+    - cron: "0,30 * * * *"
+    # Re-evaluate shortly after a midnight display-window boundary.
+    - cron: "5 16 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -43,6 +43,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           npm install
+
+      - name: Test preview selection
+        run: python -m unittest discover -s tests -v
 
       - name: Run image sync
         run: npm start

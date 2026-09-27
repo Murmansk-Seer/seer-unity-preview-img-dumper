@@ -18,8 +18,10 @@ coverage
 /cypress/videos/
 
 # Python缓存
+.venv/
 __pycache__/
 *.pyc
+/DefaultPackage/game_dll_gamelogic_dll_bytes
 
 # 临时文件
 *.tmp
@@ -59,4 +61,3 @@ Thumbs.db
 .edgeone/*
 !.edgeone/project.json
 .tef_dist/*
-  

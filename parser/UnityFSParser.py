@@ -1,76 +1,88 @@
-import os
+"""Export the current preview panel and, during a window, the following panel."""
+
+from __future__ import annotations
+
+from shutil import copyfile
+from pathlib import Path
+
 import UnityPy
+from PIL import Image
 
-base_dir = os.path.dirname(__file__)
+from preview_selection import manifest_version, read_window, select_panels
 
-config_path = os.path.join(
-    base_dir,
-    "..",
-    "DefaultPackage",
-    "game_ui_activitylistpreview",
-)
+ROOT = Path(__file__).resolve().parent.parent
+BUNDLE = ROOT / "DefaultPackage" / "game_ui_activitylistpreview"
+MANIFEST = ROOT / "DefaultPackage" / "PackageManifest_DefaultPackage.json"
+DLL = ROOT / "DefaultPackage" / "game_dll_gamelogic_dll_bytes"
+IMAGE_DIR = ROOT / "img"
+MAX_WIDTH = 1024
 
-export_dir = os.path.join(base_dir, "..", "img")
-os.makedirs(export_dir, exist_ok=True)
 
-for filename in os.listdir(export_dir):
-    file_path = os.path.join(export_dir, filename)
-    if os.path.isfile(file_path):
-        os.remove(file_path)
-
-env = UnityPy.load(config_path)
-
-object_map = {obj.path_id: obj for obj in env.objects}
-
-export_count = 0
-
-for obj in env.objects:
-    if obj.type.name != "GameObject":
-        continue
-    try:
-        go = obj.read()
-    except Exception:
-        continue
-    if not go.m_Name.startswith("imgPreview"):
-        continue
-
-    print(f"Processing: {go.m_Name} {go.m_IsActive}")
-
-    # 只处理激活的
-    if not go.m_IsActive:
-        print("  Skipped (inactive)")
-        continue
-
-    for component in go.m_Component:
-        reader = component.component
-        if reader.type.name != "MonoBehaviour":
+def read_panels() -> dict[str, tuple[bool, Image.Image]]:
+    environment = UnityPy.load(str(BUNDLE))
+    objects = {item.path_id: item for item in environment.objects}
+    panels: dict[str, tuple[bool, Image.Image]] = {}
+    for item in environment.objects:
+        if item.type.name != "GameObject":
             continue
         try:
-            tree = reader.read_typetree()
+            game_object = item.read()
         except Exception:
             continue
-
-        sprite_info = tree.get("m_Sprite")
-
-        if not sprite_info:
+        if game_object.m_Name not in {"imgPreview", "imgPreview_1"}:
             continue
+        for component in game_object.m_Component:
+            reader = component.component
+            if reader.type.name != "MonoBehaviour":
+                continue
+            try:
+                sprite_id = reader.read_typetree().get("m_Sprite", {}).get("m_PathID")
+                sprite = objects[sprite_id].read() if sprite_id in objects else None
+                if sprite is not None:
+                    panels[game_object.m_Name] = (
+                        bool(game_object.m_IsActive),
+                        sprite.image.copy(),
+                    )
+                    break
+            except Exception as error:
+                print(f"Could not read {game_object.m_Name}: {error}")
+    return panels
 
-        sprite_path_id = sprite_info.get("m_PathID", 0)
 
-        if not sprite_path_id:
-            continue
+def save_panel(image: Image.Image, path: Path) -> None:
+    if image.width > MAX_WIDTH:
+        height = round(image.height * MAX_WIDTH / image.width)
+        image = image.resize((MAX_WIDTH, height), Image.Resampling.LANCZOS)
+    image.save(path)
+    print(f"Exported {path.name}: {image.width}x{image.height}")
 
-        sprite_obj = object_map.get(sprite_path_id)
 
-        if not sprite_obj:
-            print(f"  Sprite not found: {sprite_path_id}")
-            continue
-        try:
-            sprite = sprite_obj.read()
-            image = sprite.image
-            output_path = os.path.join(export_dir, f"{go.m_Name}.png")
-            image.save(output_path)
-            export_count += 1
-        except Exception as e:
-            print(f"  Export failed: {e}")
-        break
+def main() -> None:
+    panels = read_panels()
+    version = manifest_version(MANIFEST)
+    window = read_window(DLL, BUNDLE, MANIFEST)
+    if window["manifest_version"] != version:
+        raise ValueError("Preview DLL and UI asset versions do not match")
+    selected = select_panels(
+        {name: active for name, (active, _) in panels.items()}, window
+    )
+    print(f"Asset version {version}; selected panels: {', '.join(selected)}")
+
+    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+    for filename in (
+        "preview.png",
+        "imgPreview.png",
+        "imgPreview_1.png",
+        "combined.png",
+    ):
+        (IMAGE_DIR / filename).unlink(missing_ok=True)
+    for index, name in enumerate(selected):
+        filename = "preview.png" if index == 0 else "imgPreview_1.png"
+        save_panel(panels[name][1], IMAGE_DIR / filename)
+    if len(selected) == 1:
+        copyfile(IMAGE_DIR / "preview.png", IMAGE_DIR / "imgPreview_1.png")
+        print("Single panel: secondary URL mirrors the primary for compatibility")
+
+
+if __name__ == "__main__":
+    main()
