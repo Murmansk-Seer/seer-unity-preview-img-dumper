@@ -28,7 +28,7 @@ async function runUpdate() {
   console.log(`当前本地版本: ${info.local}`);
   console.log(`远程版本: ${info.remote}`);
 
-  await updater.update(1, ["activityListPreview"]);
+  await updater.update(2, ["activityListPreview", "gamelogic_dll_bytes"]);
 }
 
 runUpdate().catch((e) => console.error("更新失败:", e));

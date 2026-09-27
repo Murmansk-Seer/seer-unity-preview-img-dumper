@@ -1,4 +1,5 @@
 import PQueue from "p-queue";
+import * as fs from "fs";
 import Downloader from "./Downloader";
 import YooVersionManager from "./YooVersionManager";
 import { DownloadParams } from "./types";
@@ -23,10 +24,12 @@ export default class Updater {
    */
   async update(semaphoreLimit?: number, includeKeywords?: string[]) {
     this.log("检查更新...");
-    const manifest = await this.versionManager.generateUpdateManifest();
-    if (!manifest) return this.log("没有需要更新的文件");
-
-    let filesToUpdate = Array.from(manifest.items);
+    const remote = await this.versionManager.getRemoteManifest();
+    const local = this.versionManager.loadLocalManifest();
+    let filesToUpdate = Array.from(remote.items).filter(
+      ([filename, item]) =>
+        !fs.existsSync(filename) || local.items.get(filename)?.fileHash !== item.fileHash
+    );
 
     if (includeKeywords && includeKeywords.length > 0) {
       filesToUpdate = filesToUpdate.filter(([filename]) => {
@@ -38,11 +41,13 @@ export default class Updater {
       this.log(`应用筛选条件: 包含关键字 ${includeKeywords.join(", ")}`);
       this.log(`筛选后需要更新的文件数量: ${filesToUpdate.length}`);
 
-      if (filesToUpdate.length === 0) {
-        return this.log("没有符合筛选条件的文件需要更新");
-      }
     } else {
       this.log(`需要更新文件数量: ${filesToUpdate.length}`);
+    }
+
+    if (filesToUpdate.length === 0) {
+      this.versionManager.saveManifestToLocal(remote);
+      return this.log("资源未变化");
     }
 
     const tasks: DownloadParams[] = filesToUpdate.map(([fn, item]) => ({
@@ -56,7 +61,7 @@ export default class Updater {
       : undefined;
 
     await this.downloader.downloads(tasks, this.postprocess, semaphore);
-    this.versionManager.saveManifestToLocal(manifest);
+    this.versionManager.saveManifestToLocal(remote);
     this.log("更新完成");
   }
 

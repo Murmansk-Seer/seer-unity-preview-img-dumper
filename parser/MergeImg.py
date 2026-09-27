@@ -1,31 +1,23 @@
 from PIL import Image
 import os
-import re
 
 BASE_DIR = os.path.dirname(__file__)
 IMG_DIR = os.path.join(BASE_DIR, "..", "img")
-OUTPUT_PATH = os.path.join(IMG_DIR, "preview.png")
+OUTPUT_PATH = os.path.join(IMG_DIR, "combined.png")
 
 MAX_WIDTH = 1024
 
 
 def get_png_files():
-    files = []
-    for name in os.listdir(IMG_DIR):
-        if not name.lower().endswith(".png"):
-            continue
-        if name == "preview.png":
-            continue
-        files.append(name)
-    return sorted(files, key=sort_key)
-
-
-def sort_key(name):
-    base = os.path.splitext(name)[0]
-    match = re.search(r"_(\d+)$", base)
-    if match:
-        return (0, int(match.group(1)))
-    return (1, base)
+    primary = os.path.join(IMG_DIR, "preview.png")
+    secondary = os.path.join(IMG_DIR, "imgPreview_1.png")
+    if not os.path.isfile(primary):
+        return []
+    if os.path.isfile(secondary):
+        with open(primary, "rb") as first, open(secondary, "rb") as second:
+            if first.read() != second.read():
+                return ["preview.png", "imgPreview_1.png"]
+    return ["preview.png"]
 
 
 def resize_if_needed(img):
