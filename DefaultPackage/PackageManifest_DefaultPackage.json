@@ -1,5 +1,5 @@
 {
-  "version": "20260925185121",
+  "version": "20260928155626",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -6072,9 +6072,9 @@
       "fileHash": "d69857a4ad231d212242d87641cc5c27"
     },
     "DefaultPackage/game_dll_gamelogic_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/b7247fb208828c4fdc359ce0aa0170ee",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/0e9f3287b603478d8858881ceb9cd921",
       "localBasename": "game_dll_gamelogic_dll_bytes.bundle",
-      "fileHash": "b7247fb208828c4fdc359ce0aa0170ee"
+      "fileHash": "0e9f3287b603478d8858881ceb9cd921"
     },
     "DefaultPackage/game_dll_metahotfix_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/7dc0fb11382552cf7f9bfdf873eebc22",
@@ -6117,9 +6117,9 @@
       "fileHash": "6d62d89ffa7730aed3010971d12d75ea"
     },
     "DefaultPackage/game_dll_weeklyupdate_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/7febce2dab799bf82b687a0b0358f774",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/5fa97e45dbeb8d4da720e96f943a16d4",
       "localBasename": "game_dll_weeklyupdate_dll_bytes.bundle",
-      "fileHash": "7febce2dab799bf82b687a0b0358f774"
+      "fileHash": "5fa97e45dbeb8d4da720e96f943a16d4"
     },
     "DefaultPackage/game_dll_yooasset_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/3885629a7091e6a79c85ed713831a69f",
@@ -10652,9 +10652,9 @@
       "fileHash": "3f2a52d81dbbab792e33a3b5a6aa754c"
     },
     "DefaultPackage/art_ui_battleeffect_abnormal": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/ce5738692c4dc436b918588ef81954e0",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/0ab695373542cc23f3456f4fdbee789b",
       "localBasename": "art_ui_battleeffect_abnormal.bundle",
-      "fileHash": "ce5738692c4dc436b918588ef81954e0"
+      "fileHash": "0ab695373542cc23f3456f4fdbee789b"
     },
     "DefaultPackage/art_ui_battleeffect_bosseffect": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/8066a17445afca0155b307cb73fbc4b0",
@@ -38232,9 +38232,9 @@
       "fileHash": "bced96cd09b84e57cd637dbb432d3318"
     },
     "DefaultPackage/art_autocard_effect": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/8f75907abdf9fb44e7ef981868719dfa",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/47f24df2a849483fbf3f512057a63aa2",
       "localBasename": "art_autocard_effect.bundle",
-      "fileHash": "8f75907abdf9fb44e7ef981868719dfa"
+      "fileHash": "47f24df2a849483fbf3f512057a63aa2"
     },
     "DefaultPackage/art_autocard_effect_gaiya": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/c6b8a200d271b8d4506302b37bb49f8c",
