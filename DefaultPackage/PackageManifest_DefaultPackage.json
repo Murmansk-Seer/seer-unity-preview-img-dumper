@@ -1,5 +1,5 @@
 {
-  "version": "20260929174130",
+  "version": "20260930100829",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -32837,9 +32837,9 @@
       "fileHash": "78ec6db897fbc4ffa49ce8d8bcc08f56"
     },
     "DefaultPackage/game_ui_autocard": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/f8f8a2d656a774796aaab1b56cbeeabc",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/c8f723744cf0112e60b30975d5fe60c7",
       "localBasename": "game_ui_autocard.bundle",
-      "fileHash": "f8f8a2d656a774796aaab1b56cbeeabc"
+      "fileHash": "c8f723744cf0112e60b30975d5fe60c7"
     },
     "DefaultPackage/game_ui_autocard_playback": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/0cfaf9773fc22b590c61e4552b46599f",
@@ -38232,9 +38232,9 @@
       "fileHash": "bced96cd09b84e57cd637dbb432d3318"
     },
     "DefaultPackage/art_autocard_effect": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/f4b6de2f4f657f65ab292d150195e4af",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/6186a45f86fb4cb017049136c7b5b1fe",
       "localBasename": "art_autocard_effect.bundle",
-      "fileHash": "f4b6de2f4f657f65ab292d150195e4af"
+      "fileHash": "6186a45f86fb4cb017049136c7b5b1fe"
     },
     "DefaultPackage/art_autocard_effect_gaiya": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/c6b8a200d271b8d4506302b37bb49f8c",
