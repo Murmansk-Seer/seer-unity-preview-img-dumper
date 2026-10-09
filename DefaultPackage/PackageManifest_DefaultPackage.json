@@ -1,5 +1,5 @@
 {
-  "version": "20261008215127",
+  "version": "20261009171440",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -7,9 +7,9 @@
       "fileHash": "2c106cf5ca538b060228b85f24b92b19"
     },
     "DefaultPackage/game_prefabs_swf_skill": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/9f11a8d80681d9fdd54e793a57d5b4cc",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/fc89f61fc66f37126ff230fe20a7f90b",
       "localBasename": "game_prefabs_swf_skill.bundle",
-      "fileHash": "9f11a8d80681d9fdd54e793a57d5b4cc"
+      "fileHash": "fc89f61fc66f37126ff230fe20a7f90b"
     },
     "DefaultPackage/art_effects_transition": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/84b4119d0607bea7596027ce92f46165",
