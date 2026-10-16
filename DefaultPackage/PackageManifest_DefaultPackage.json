@@ -1,5 +1,5 @@
 {
-  "version": "20261015213814",
+  "version": "20261016152125",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -10417,9 +10417,9 @@
       "fileHash": "129788424491153d03be9dbb65ed0708"
     },
     "DefaultPackage/game_videos_welcome_loop": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/93458ae464b74566830a925aca538c0c",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/44133917b05807415b8d11019c3d897f",
       "localBasename": "game_videos_welcome_loop.bundle",
-      "fileHash": "93458ae464b74566830a925aca538c0c"
+      "fileHash": "44133917b05807415b8d11019c3d897f"
     },
     "DefaultPackage/game_videos_welcome_loop_temp": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/f7958f1bde0e5d8f966319d722a74628",
@@ -10432,9 +10432,9 @@
       "fileHash": "b4d222316eaef326c326ac1dbd18c95d"
     },
     "DefaultPackage/game_videos_welcome_loop_vp8": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/cce0d55dd91e3dec23fae5f970cd20f4",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/f9a1184690e0d9d2af8b06ef0cb3daa0",
       "localBasename": "game_videos_welcome_loop_vp8.bundle",
-      "fileHash": "cce0d55dd91e3dec23fae5f970cd20f4"
+      "fileHash": "f9a1184690e0d9d2af8b06ef0cb3daa0"
     },
     "DefaultPackage/game_videos_xinshoumanhua1": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/0769035e4fb014f178114248e02a6f3a",
@@ -10587,9 +10587,9 @@
       "fileHash": "28392a6720dd1e758676afe199f43dd8"
     },
     "DefaultPackage/art_ui_mainstoryline_image_res_video_story_102801": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/034b0e499886845792818af01cfa63b2",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/86687b65537fc1a62bafe49affe8e10e",
       "localBasename": "art_ui_mainstoryline_image_res_video_story_102801.bundle",
-      "fileHash": "034b0e499886845792818af01cfa63b2"
+      "fileHash": "86687b65537fc1a62bafe49affe8e10e"
     },
     "DefaultPackage/art_ui_mainstoryline_image_res_video_test_msl_video": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/ea1380ec32a4df58de874e1cf2fc3d71",
@@ -14462,9 +14462,9 @@
       "fileHash": "db0649d401fc7f32d1932d6d4267cb0e"
     },
     "DefaultPackage/art_ui_mainstoryline_image_res_normal": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/7dcd0edabd90fad2b6cca4ea241409bf",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/a011d0bfd55594154526b6ce20a91b56",
       "localBasename": "art_ui_mainstoryline_image_res_normal.bundle",
-      "fileHash": "7dcd0edabd90fad2b6cca4ea241409bf"
+      "fileHash": "a011d0bfd55594154526b6ce20a91b56"
     },
     "DefaultPackage/defaultpackage_assets_art_ui_assets_mainstoryline_image_res_role_15.bundle": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/484ac6e1fcc3515a6ca09c8528aa5b86",
@@ -23047,9 +23047,9 @@
       "fileHash": "950bc4fec1603f85ed400c4f040cd776"
     },
     "DefaultPackage/game_ui_login": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/9e4f863d135797f62d3cfa56c8feb3be",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/c13fa60834b691463ead89560baf18f9",
       "localBasename": "game_ui_login.bundle",
-      "fileHash": "9e4f863d135797f62d3cfa56c8feb3be"
+      "fileHash": "c13fa60834b691463ead89560baf18f9"
     },
     "DefaultPackage/game_ui_lotterygiftpuni": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/1b74da97af78793f8e98c1b67e8b9b02",
