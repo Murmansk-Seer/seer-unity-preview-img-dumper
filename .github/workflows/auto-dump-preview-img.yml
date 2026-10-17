@@ -47,6 +47,9 @@ jobs:
       - name: Test preview selection
         run: python -m unittest discover -s tests -v
 
+      - name: Test network retries and fail-fast update
+        run: npm test
+
       - name: Run image sync
         run: npm start
 
