@@ -3,6 +3,7 @@ import * as path from "path";
 import axios from "axios";
 import { Manifest, ManifestItem, PackageManifest } from "./types";
 import YooManifestParser from "./YooManifestParser";
+import { requestWithRetry } from "./network";
 
 export default class YooVersionManager {
   constructor(
@@ -29,7 +30,7 @@ export default class YooVersionManager {
 
   async getRemoteVersion(): Promise<string> {
     const url = new URL(this.versionFileName, this.remotePath).href;
-    const res = await axios.get(url);
+    const res = await requestWithRetry<string>(axios, { url, responseType: "text" });
     return res.data;
   }
 
@@ -45,7 +46,7 @@ export default class YooVersionManager {
       `PackageManifest_${this.packageName}_${version}.bytes`,
       this.remotePath
     ).href;
-    const res = await axios.get(bytesUrl, { responseType: "arraybuffer" });
+    const res = await requestWithRetry<ArrayBuffer>(axios, { url: bytesUrl, responseType: "arraybuffer" });
     return this.simplifyManifest(this.manifestFactory(Buffer.from(res.data)));
   }
 

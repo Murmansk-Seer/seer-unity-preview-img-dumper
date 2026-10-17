@@ -5,6 +5,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import PQueue from "p-queue";
 import cliProgress from "cli-progress";
 import { DownloadParams, DownloadMethod } from "./types";
+import { DownloadIntegrityError, requestWithRetry } from "./network";
 
 export default class Downloader {
   private client: AxiosInstance;
@@ -15,47 +16,23 @@ export default class Downloader {
     this.semaphore = new PQueue({ concurrency: limit });
   }
 
-  private async getFileSize(url: string): Promise<number> {
-    try {
-      const response = await this.client.head(url);
-      return parseInt(response.headers["content-length"] || "0", 10);
-    } catch {
-      return 0;
-    }
-  }
-
   private async getStreamData(
     url: string,
     method: DownloadMethod = "GET",
     md5?: string,
     progressCallback?: (progress: number) => void
   ): Promise<Buffer> {
-    return new Promise((resolve, reject) => {
-      this.client({ url, method, responseType: "stream" })
-        .then((res) => {
-          const total = parseInt(res.headers["content-length"] || "0", 10);
-          let downloaded = 0;
-          let buf = Buffer.alloc(0);
-          res.data.on("data", (chunk: Buffer) => {
-            buf = Buffer.concat([buf, chunk]);
-            downloaded += chunk.length;
-            if (progressCallback && total > 0) {
-              progressCallback(downloaded / total);
-            }
-          });
-          res.data.on("end", () => {
-            if (md5) {
-              const hash = crypto.createHash("md5").update(buf).digest("hex");
-              if (hash !== md5.toLowerCase()) {
-                return reject(new Error(`MD5 check failed for ${url}`));
-              }
-            }
-            resolve(buf);
-          });
-          res.data.on("error", reject);
-        })
-        .catch(reject);
+    const response = await requestWithRetry<ArrayBuffer>(this.client, {
+      url, method, responseType: "arraybuffer",
+      onDownloadProgress: ({ progress }) => {
+        if (progress !== undefined) progressCallback?.(progress);
+      },
+    }, (res) => {
+      if (md5 && crypto.createHash("md5").update(Buffer.from(res.data)).digest("hex") !== md5.toLowerCase()) {
+        throw new DownloadIntegrityError(`MD5 check failed for ${url}`);
+      }
     });
+    return Buffer.from(response.data);
   }
 
   async download(
@@ -71,19 +48,18 @@ export default class Downloader {
       const dir = path.dirname(filename);
       if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-      const totalSize = await this.getFileSize(urlStr);
       const progressBar = new cliProgress.SingleBar(
         { format: `${path.basename(filename)} | {bar} | {percentage}%` },
         cliProgress.Presets.shades_classic
       );
-      progressBar.start(totalSize, 0);
+      progressBar.start(100, 0);
 
       try {
         const data = await this.getStreamData(urlStr, method, md5, (p) =>
-          progressBar.update(Math.round(p * totalSize))
+          progressBar.update(Math.round(p * 100))
         );
         fs.writeFileSync(filename, postprocess ? postprocess(data) : data);
-        progressBar.update(totalSize);
+        progressBar.update(100);
       } finally {
         progressBar.stop();
       }
@@ -103,14 +79,17 @@ export default class Downloader {
     const queue = semaphore || this.semaphore;
     let done = 0;
 
-    await Promise.all(
-      params.map((p) =>
-        this.download(p, postprocess, queue).then(() => {
-          done++;
-          totalBar.update(done);
-        })
-      )
-    );
-    totalBar.stop();
+    try {
+      await Promise.all(
+        params.map((p) =>
+          this.download(p, postprocess, queue).then(() => {
+            done++;
+            totalBar.update(done);
+          })
+        )
+      );
+    } finally {
+      totalBar.stop();
+    }
   }
 }
