@@ -1,5 +1,5 @@
 {
-  "version": "20261016152125",
+  "version": "20261019103309",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -6087,9 +6087,9 @@
       "fileHash": "d69857a4ad231d212242d87641cc5c27"
     },
     "DefaultPackage/game_dll_gamelogic_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/4604c4b53085096378eb76c5554d3b13",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/90283d6c11e4f61bbff029ae9f965d56",
       "localBasename": "game_dll_gamelogic_dll_bytes.bundle",
-      "fileHash": "4604c4b53085096378eb76c5554d3b13"
+      "fileHash": "90283d6c11e4f61bbff029ae9f965d56"
     },
     "DefaultPackage/game_dll_metahotfix_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/7dc0fb11382552cf7f9bfdf873eebc22",
