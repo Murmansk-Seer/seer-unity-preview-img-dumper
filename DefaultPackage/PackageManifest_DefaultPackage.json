@@ -1,5 +1,5 @@
 {
-  "version": "20261022213254",
+  "version": "20261023133119",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -6132,9 +6132,9 @@
       "fileHash": "6d62d89ffa7730aed3010971d12d75ea"
     },
     "DefaultPackage/game_dll_weeklyupdate_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/081f28aacc3659535dfd39027acc4c98",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/48265665570945b5d78b6dc63f9a293c",
       "localBasename": "game_dll_weeklyupdate_dll_bytes.bundle",
-      "fileHash": "081f28aacc3659535dfd39027acc4c98"
+      "fileHash": "48265665570945b5d78b6dc63f9a293c"
     },
     "DefaultPackage/game_dll_yooasset_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/3885629a7091e6a79c85ed713831a69f",
@@ -23127,9 +23127,9 @@
       "fileHash": "338f6fc66f5711c449bba43a3f29e190"
     },
     "DefaultPackage/game_ui_lingyaoqianyouskinsell1st": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/77021aef954d2ee1a6327644f5544a93",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/7e207b4611d8d9623d5f191dca79bbb8",
       "localBasename": "game_ui_lingyaoqianyouskinsell1st.bundle",
-      "fileHash": "77021aef954d2ee1a6327644f5544a93"
+      "fileHash": "7e207b4611d8d9623d5f191dca79bbb8"
     },
     "DefaultPackage/game_ui_livesharepanel": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/950bc4fec1603f85ed400c4f040cd776",
