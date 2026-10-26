@@ -1,5 +1,5 @@
 {
-  "version": "20261023133119",
+  "version": "20261026161231",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -6087,9 +6087,9 @@
       "fileHash": "d69857a4ad231d212242d87641cc5c27"
     },
     "DefaultPackage/game_dll_gamelogic_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/dcc5db9e33b88dcaf478383d169391f1",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/58064e3d768fbda81361f18e44bf6689",
       "localBasename": "game_dll_gamelogic_dll_bytes.bundle",
-      "fileHash": "dcc5db9e33b88dcaf478383d169391f1"
+      "fileHash": "58064e3d768fbda81361f18e44bf6689"
     },
     "DefaultPackage/game_dll_metahotfix_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/7dc0fb11382552cf7f9bfdf873eebc22",
@@ -21592,9 +21592,9 @@
       "fileHash": "822d7111cf991672e2f80e9bb969ad1c"
     },
     "DefaultPackage/game_ui_aolanmegapanel": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/5031c24a1e31021e9bafbcc7b07e6b55",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/85da4b2aaab6914870555e39958f6fa6",
       "localBasename": "game_ui_aolanmegapanel.bundle",
-      "fileHash": "5031c24a1e31021e9bafbcc7b07e6b55"
+      "fileHash": "85da4b2aaab6914870555e39958f6fa6"
     },
     "DefaultPackage/game_ui_aoliafeatureupgrademainpanel": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/f7b7bed2c61639726f0c5131646de216",
@@ -22992,9 +22992,9 @@
       "fileHash": "e403a73f79b7b1ab27cdf31ff6096f05"
     },
     "DefaultPackage/game_ui_jiaguwengame": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/f33d4cae58013fe785326f4a8d39ad5f",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/e04beaf0e6fdfcce8e710ebb07571243",
       "localBasename": "game_ui_jiaguwengame.bundle",
-      "fileHash": "f33d4cae58013fe785326f4a8d39ad5f"
+      "fileHash": "e04beaf0e6fdfcce8e710ebb07571243"
     },
     "DefaultPackage/game_ui_jianbimecha": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/061ef51073806aa17f36b5794da4bc20",
