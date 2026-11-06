@@ -1,5 +1,5 @@
 {
-  "version": "20261105235600",
+  "version": "20261106174428",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -6132,9 +6132,9 @@
       "fileHash": "d69857a4ad231d212242d87641cc5c27"
     },
     "DefaultPackage/game_dll_gamelogic_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/8694d8e59fd06de9fafa5895650ea25d",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/a0376ccefb2b1223e2800eafa4a1ae41",
       "localBasename": "game_dll_gamelogic_dll_bytes.bundle",
-      "fileHash": "8694d8e59fd06de9fafa5895650ea25d"
+      "fileHash": "a0376ccefb2b1223e2800eafa4a1ae41"
     },
     "DefaultPackage/game_dll_metahotfix_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/fa710f824c9abc540f5a70ab409804ce",
@@ -6177,9 +6177,9 @@
       "fileHash": "6d62d89ffa7730aed3010971d12d75ea"
     },
     "DefaultPackage/game_dll_weeklyupdate_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/f2b9aebce5b3e02519841351353cf62a",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/5838dfa6388c3f852719cae9a39882fb",
       "localBasename": "game_dll_weeklyupdate_dll_bytes.bundle",
-      "fileHash": "f2b9aebce5b3e02519841351353cf62a"
+      "fileHash": "5838dfa6388c3f852719cae9a39882fb"
     },
     "DefaultPackage/game_dll_yooasset_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/3885629a7091e6a79c85ed713831a69f",
@@ -22527,9 +22527,9 @@
       "fileHash": "12b0161738997a0590f2974dbba6408a"
     },
     "DefaultPackage/game_ui_dangoactivity": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/976dd5ba06e89a5786225c4e06d94a0a",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/97e88496c8b01e64af30554306047d8b",
       "localBasename": "game_ui_dangoactivity.bundle",
-      "fileHash": "976dd5ba06e89a5786225c4e06d94a0a"
+      "fileHash": "97e88496c8b01e64af30554306047d8b"
     },
     "DefaultPackage/game_ui_dangofire": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/14dd3b6db3a8708df6c8043d72d009db",
@@ -27552,9 +27552,9 @@
       "fileHash": "5cb1d3dcad9367a3ff36b60962846f59"
     },
     "DefaultPackage/game_bg_dyna_dangoactivity": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/123b8f39a80138b8272608d0aff7b998",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/ff69339f734e075072cf4f15e24ccd0e",
       "localBasename": "game_bg_dyna_dangoactivity.bundle",
-      "fileHash": "123b8f39a80138b8272608d0aff7b998"
+      "fileHash": "ff69339f734e075072cf4f15e24ccd0e"
     },
     "DefaultPackage/game_bg_dyna_luckyrocketgameentry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/9e1505656bd46e552b844ac5766b8820",
