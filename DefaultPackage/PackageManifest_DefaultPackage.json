@@ -1,5 +1,5 @@
 {
-  "version": "20261119215136",
+  "version": "20261120150210",
   "items": {
     "DefaultPackage/game_prefabs_entry": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/2c106cf5ca538b060228b85f24b92b19",
@@ -6162,9 +6162,9 @@
       "fileHash": "d69857a4ad231d212242d87641cc5c27"
     },
     "DefaultPackage/game_dll_gamelogic_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/7e979edf33912548cdda454a18d90e3a",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/178099146a0a64fdce6f697ebe8171e9",
       "localBasename": "game_dll_gamelogic_dll_bytes.bundle",
-      "fileHash": "7e979edf33912548cdda454a18d90e3a"
+      "fileHash": "178099146a0a64fdce6f697ebe8171e9"
     },
     "DefaultPackage/game_dll_metahotfix_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/c5a5844cd2f10199d2ced7af2fa8c854",
@@ -6207,9 +6207,9 @@
       "fileHash": "6d62d89ffa7730aed3010971d12d75ea"
     },
     "DefaultPackage/game_dll_weeklyupdate_dll_bytes": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/98a3c15fe88e7c1706384855116896f6",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/ddc6784f485d9c1c25b7d36b960511b2",
       "localBasename": "game_dll_weeklyupdate_dll_bytes.bundle",
-      "fileHash": "98a3c15fe88e7c1706384855116896f6"
+      "fileHash": "ddc6784f485d9c1c25b7d36b960511b2"
     },
     "DefaultPackage/game_dll_yooasset_dll_bytes": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/3885629a7091e6a79c85ed713831a69f",
@@ -22687,9 +22687,9 @@
       "fileHash": "12b0161738997a0590f2974dbba6408a"
     },
     "DefaultPackage/game_ui_dangoactivity": {
-      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/a647e8772730fec66635b81845542aea",
+      "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/4b0763265103cdfec78311ccd068eb5e",
       "localBasename": "game_ui_dangoactivity.bundle",
-      "fileHash": "a647e8772730fec66635b81845542aea"
+      "fileHash": "4b0763265103cdfec78311ccd068eb5e"
     },
     "DefaultPackage/game_ui_dangofire": {
       "remoteFilename": "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/14dd3b6db3a8708df6c8043d72d009db",
